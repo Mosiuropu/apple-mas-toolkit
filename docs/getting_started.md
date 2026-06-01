@@ -13,7 +13,7 @@ This guide walks you through setting up and using the Apple MAS Toolkit.
 ### Option 1: Install from source (recommended)
 
 ```bash
-git clone https://github.com/Mosiuropu/apple-mas-toolkit.git
+git clone https://github.com/Mosiuropu/apple-mas-toolkit-hidden.git
 cd apple-mas-toolkit
 pip install -e .
 ```

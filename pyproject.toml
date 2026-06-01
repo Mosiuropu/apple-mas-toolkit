@@ -48,10 +48,10 @@ notebooks = [
 apple-mas = "apple_mas.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/Mosiuropu/apple-mas-toolkit"
-Documentation = "https://github.com/Mosiuropu/apple-mas-toolkit#readme"
-Repository = "https://github.com/Mosiuropu/apple-mas-toolkit"
-Issues = "https://github.com/Mosiuropu/apple-mas-toolkit/issues"
+Homepage = "https://github.com/Mosiuropu/apple-mas-toolkit-hidden"
+Documentation = "https://github.com/Mosiuropu/apple-mas-toolkit-hidden#readme"
+Repository = "https://github.com/Mosiuropu/apple-mas-toolkit-hidden"
+Issues = "https://github.com/Mosiuropu/apple-mas-toolkit-hidden/issues"
 
 [tool.setuptools.packages.find]
 include = ["apple_mas*"]
