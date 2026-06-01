@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apple-mas-toolkit"
+version = "1.0.0"
+description = "Apple Marker-Assisted Selection (MAS) Toolkit for fruit quality trait analysis in apple breeding programs"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Md Mosiur Rahman Bhuyin Apu", email = "mosiurrahmanapu@gmail.com"}
+]
+keywords = ["apple", "breeding", "marker-assisted-selection", "MAS", "SSR", "SCAR", "fruit-quality", "genomics", "horticulture", "genetics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Agriculture",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "matplotlib>=3.6",
+    "seaborn>=0.12",
+    "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+]
+
+[project.scripts]
+apple-mas = "apple_mas.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mosiurrahmanapu/apple-mas-toolkit"
+Documentation = "https://github.com/mosiurrahmanapu/apple-mas-toolkit#readme"
+Repository = "https://github.com/mosiurrahmanapu/apple-mas-toolkit"
+Issues = "https://github.com/mosiurrahmanapu/apple-mas-toolkit/issues"
+
+[tool.setuptools.packages.find]
+include = ["apple_mas*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
