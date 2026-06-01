@@ -1,0 +1,695 @@
+{
+  "version": "3.0.0",
+  "organism": "Malus domestica Borkh.",
+  "ploidy": "Diploid (2n = 34)",
+  "reference_genome": "GDDH13 v1.1 (Daccord et al., 2014)",
+  "nomenclature_standard": "Genome Database for Rosaceae (GDR) conventions",
+  "chromosomes": {
+    "1": {
+      "linkage_group": "LG01",
+      "approximate_length_Mb": 30.1,
+      "major_loci": ["Rvi6/Vf", "Rvi2"],
+      "description": "Apple scab resistance locus (Vf/Rvi6), introgressed from Malus micromalus"
+    },
+    "2": {
+      "linkage_group": "LG02",
+      "approximate_length_Mb": 35.3,
+      "major_loci": ["Rvi2"],
+      "description": "Secondary scab resistance QTL region"
+    },
+    "3": {
+      "linkage_group": "LG03",
+      "approximate_length_Mb": 29.4,
+      "major_loci": ["Fb_Mr5"],
+      "description": "Fire blight resistance (Fb_Mr5 from Malus robusta 5)"
+    },
+    "4": {
+      "linkage_group": "LG04",
+      "approximate_length_Mb": 31.2,
+      "major_loci": [],
+      "description": "General genomic region"
+    },
+    "5": {
+      "linkage_group": "LG05",
+      "approximate_length_Mb": 28.7,
+      "major_loci": ["Rvi4", "Crispness QTL"],
+      "description": "Scab resistance (Rvi4) and fruit crispness QTL"
+    },
+    "6": {
+      "linkage_group": "LG06",
+      "approximate_length_Mb": 29.9,
+      "major_loci": [],
+      "description": "General genomic region"
+    },
+    "7": {
+      "linkage_group": "LG07",
+      "approximate_length_Mb": 30.5,
+      "major_loci": [],
+      "description": "Fire blight resistance QTL region"
+    },
+    "8": {
+      "linkage_group": "LG08",
+      "approximate_length_Mb": 31.8,
+      "major_loci": ["Ma3", "BP16", "BP13"],
+      "description": "Fruit acidity modifier (Ma3) and bitter pit susceptibility loci"
+    },
+    "9": {
+      "linkage_group": "LG09",
+      "approximate_length_Mb": 29.6,
+      "major_loci": ["MYB10", "MdMYB10"],
+      "description": "Anthocyanin biosynthesis (MYB10) controlling flesh and skin color"
+    },
+    "10": {
+      "linkage_group": "LG10",
+      "approximate_length_Mb": 32.1,
+      "major_loci": ["Md-ACO1", "Md-PG1", "Co"],
+      "description": "Ethylene biosynthesis (ACO1), fruit softening (PG1), and columnar growth (Co)"
+    },
+    "11": {
+      "linkage_group": "LG11",
+      "approximate_length_Mb": 28.3,
+      "major_loci": ["Pl2", "Rvi15"],
+      "description": "Powdery mildew resistance (Pl2) and scab resistance (Rvi15)"
+    },
+    "12": {
+      "linkage_group": "LG12",
+      "approximate_length_Mb": 27.8,
+      "major_loci": ["Pl5"],
+      "description": "Powdery mildew resistance (Pl5)"
+    },
+    "13": {
+      "linkage_group": "LG13",
+      "approximate_length_Mb": 25.4,
+      "major_loci": [],
+      "description": "General genomic region"
+    },
+    "14": {
+      "linkage_group": "LG14",
+      "approximate_length_Mb": 26.7,
+      "major_loci": [],
+      "description": "General genomic region"
+    },
+    "15": {
+      "linkage_group": "LG15",
+      "approximate_length_Mb": 28.9,
+      "major_loci": ["Md-ACS1"],
+      "description": "Ethylene biosynthesis (ACS1) controlling fruit firmness and shelf life"
+    },
+    "16": {
+      "linkage_group": "LG16",
+      "approximate_length_Mb": 31.5,
+      "major_loci": ["Ma1", "MdALMT9"],
+      "description": "Fruit acidity (Ma1/MdALMT9) - major gene for malic acid accumulation"
+    },
+    "17": {
+      "linkage_group": "LG17",
+      "approximate_length_Mb": 24.8,
+      "major_loci": [],
+      "description": "General genomic region"
+    }
+  },
+  "markers": {
+    "AL07": {
+      "full_name": "AL07 SSR (Vf-linked microsatellite)",
+      "type": "SSR",
+      "chromosome": "1",
+      "linkage_group": "LG01",
+      "position_cM": 26.3,
+      "position_bp_approx": 26300000,
+      "locus": "Rvi6/Vf",
+      "target_trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "AAGTTTCCATTTCCATTTCCA",
+      "reverse_primer": "CTTCCTTTTCAGATCAATCAG",
+      "dye": "FAM",
+      "allele_sizes_bp": [142, 161, 183, 205],
+      "associated_alleles": {
+        "161": {"phenotype": "Linked to Vf resistance", "desirability": "resistant"},
+        "142": {"phenotype": "Linked to susceptibility", "desirability": "susceptible"},
+        "183": {"phenotype": "Variable association", "desirability": "intermediate"},
+        "205": {"phenotype": "Rare variant", "desirability": "uncharacterized"}
+      },
+      "notes": "Co-dominant SSR closely linked to Vf/Rvi6 on Chr 1. Distinguishes homozygous from heterozygous genotypes.",
+      "references": [
+        "Gianfranceschi et al., 1998, Mol Breeding",
+        "Bus et al., 2005, Theor Appl Genet"
+      ]
+    },
+    "AM19": {
+      "full_name": "AM19 SCAR (Vf-linked)",
+      "type": "SCAR",
+      "chromosome": "1",
+      "linkage_group": "LG01",
+      "position_cM": 27.1,
+      "position_bp_approx": 27100000,
+      "locus": "Rvi6/Vf",
+      "target_trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "ATGAGAAGAAATCAATGGAATCG",
+      "reverse_primer": "TAAGTATCCCAAATTGCATCTGA",
+      "dye": "non-fluorescent",
+      "allele_sizes_bp": [200, 280],
+      "associated_alleles": {
+        "200": {"phenotype": "Vf allele present (resistant)", "desirability": "resistant"},
+        "NB": {"phenotype": "No amplification (susceptible)", "desirability": "susceptible"}
+      },
+      "notes": "Dominant SCAR marker for Vf/Rvi6. Binary presence/absence result. Use AL07 for zygosity.",
+      "references": [
+        "Gianfranceschi et al., 1999, Theor Appl Genet",
+        "Seglias et al., 1998, Plant Breeding"
+      ]
+    },
+    "Vf_SCAR": {
+      "full_name": "Vf/Rvi6 SCAR marker",
+      "type": "SCAR",
+      "chromosome": "1",
+      "linkage_group": "LG01",
+      "position_cM": 26.8,
+      "position_bp_approx": 26800000,
+      "locus": "Rvi6/Vf",
+      "target_trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "ATGAGAAGAAATCAATGGAATCG",
+      "reverse_primer": "TAAGTATCCCAAATTGCATCTGA",
+      "dye": "non-fluorescent",
+      "allele_sizes_bp": [200, 280],
+      "associated_alleles": {
+        "200": {"phenotype": "Vf allele present (scab resistance)", "desirability": "resistant"},
+        "NB": {"phenotype": "Vf allele absent (scab susceptible)", "desirability": "susceptible"}
+      },
+      "notes": "Most widely deployed scab resistance marker. For durable resistance, pyramid with Rvi2, Rvi4, Rvi15.",
+      "references": [
+        "Gianfranceschi et al., 1999, Theor Appl Genet",
+        "Calenge & Durel, 2006, Theor Appl Genet"
+      ]
+    },
+    "Rvi2_SSR": {
+      "full_name": "Rvi2-linked SSR",
+      "type": "SSR",
+      "chromosome": "2",
+      "linkage_group": "LG02",
+      "position_cM": 42.5,
+      "position_bp_approx": 18500000,
+      "locus": "Rvi2",
+      "target_trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "TGCAAGAAGAGGAGAGAGGA",
+      "reverse_primer": "CCCTTTCCCTTTCTTCATCA",
+      "dye": "HEX",
+      "allele_sizes_bp": [120, 135, 148],
+      "associated_alleles": {
+        "135": {"phenotype": "Rvi2 resistance-linked", "desirability": "resistant"},
+        "120": {"phenotype": "Susceptibility-linked", "desirability": "susceptible"}
+      },
+      "notes": "Secondary scab resistance locus. Pyramiding with Vf provides durable resistance.",
+      "references": [
+        "Patocchi et al., 2005, Theor Appl Genet",
+        "Bus et al., 2005, Theor Appl Genet"
+      ]
+    },
+    "Rvi4_SSR": {
+      "full_name": "Rvi4-linked SSR",
+      "type": "SSR",
+      "chromosome": "5",
+      "linkage_group": "LG05",
+      "position_cM": 55.2,
+      "position_bp_approx": 22100000,
+      "locus": "Rvi4",
+      "target_trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "CACAAGCCAAACCAAAACAG",
+      "reverse_primer": "GGTGGTGGTGGTGGTATTGT",
+      "dye": "FAM",
+      "allele_sizes_bp": [110, 125, 140],
+      "associated_alleles": {
+        "125": {"phenotype": "Rvi4 resistance-linked", "desirability": "resistant"},
+        "110": {"phenotype": "Susceptibility-linked", "desirability": "susceptible"}
+      },
+      "notes": "Scab resistance from Malus florentina. Effective against specific V. inaequalis races.",
+      "references": [
+        "Patocchi et al., 2004, Phytopathology"
+      ]
+    },
+    "Fb_Mr5": {
+      "full_name": "Fb_Mr5 (Fire blight resistance)",
+      "type": "SSR",
+      "chromosome": "3",
+      "linkage_group": "LG03",
+      "position_cM": 18.7,
+      "position_bp_approx": 9200000,
+      "locus": "Fb_Mr5",
+      "target_trait": "Fire Blight Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "AATGGCAAGAAGGCAAGAAG",
+      "reverse_primer": "TGGTGGTGATGATGATGATG",
+      "dye": "HEX",
+      "allele_sizes_bp": [165, 180, 195],
+      "associated_alleles": {
+        "180": {"phenotype": "Fb_Mr5 resistance", "desirability": "resistant"},
+        "165": {"phenotype": "Susceptibility", "desirability": "susceptible"}
+      },
+      "notes": "Fire blight resistance from Malus robusta 5. Important for breeding in fire blight-prone regions.",
+      "references": [
+        "Calenge et al., 2005, Theor Appl Genet",
+        "Gardiner et al., 2012, Theor Appl Genet"
+      ]
+    },
+    "CRISP_SSR": {
+      "full_name": "Crispness-associated SSR",
+      "type": "SSR",
+      "chromosome": "5",
+      "linkage_group": "LG05",
+      "position_cM": 48.6,
+      "position_bp_approx": 19800000,
+      "locus": "Crispness QTL",
+      "target_trait": "Fruit Crispness",
+      "trait_category": "fruit_quality",
+      "forward_primer": "TGGTTTGGATTGATTTGGTG",
+      "reverse_primer": "GCCAAGAAACCACAAATCAG",
+      "dye": "HEX",
+      "allele_sizes_bp": [168, 196, 210],
+      "associated_alleles": {
+        "196": {"phenotype": "Crisp texture", "desirability": "desirable"},
+        "168": {"phenotype": "Mealy/soft texture", "desirability": "undesirable"},
+        "210": {"phenotype": "Intermediate crispness", "desirability": "intermediate"}
+      },
+      "notes": "Associated with crispness retention during cold storage. The 196 bp allele delays mealiness onset.",
+      "references": [
+        "Longhi et al., 2013, BMC Plant Biology",
+        "Ru et al., 2021, Plant Biotechnol J"
+      ]
+    },
+    "Ma3_SSR": {
+      "full_name": "Ma3 modifier locus SSR",
+      "type": "SSR",
+      "chromosome": "8",
+      "linkage_group": "LG08",
+      "position_cM": 33.4,
+      "position_bp_approx": 14200000,
+      "locus": "Ma3",
+      "target_trait": "Fruit Acidity (modifier)",
+      "trait_category": "fruit_quality",
+      "forward_primer": "GGCAATGGCAATGGTATCTC",
+      "reverse_primer": "CCACCAACCAACCAACATAC",
+      "dye": "FAM",
+      "allele_sizes_bp": [155, 170, 185],
+      "associated_alleles": {
+        "170": {"phenotype": "Enhanced acidity effect", "desirability": "context_dependent"},
+        "155": {"phenotype": "Reduced modifier effect", "desirability": "context_dependent"}
+      },
+      "notes": "Modifier of Ma1 acidity effect. Works in conjunction with Ma1 on Chr 16.",
+      "references": [
+        "Bai et al., 2012, Mol Genet Genomics"
+      ]
+    },
+    "BP16": {
+      "full_name": "BP16-indel",
+      "type": "SSR",
+      "chromosome": "8",
+      "linkage_group": "LG08",
+      "position_cM": 28.9,
+      "position_bp_approx": 12100000,
+      "locus": "BP16",
+      "target_trait": "Bitter Pit Susceptibility",
+      "trait_category": "fruit_quality",
+      "forward_primer": "TGCGATGTTAGAACGAGAGC",
+      "reverse_primer": "TTGGAAACTGGATTTTATTTGC",
+      "dye": "FAM",
+      "allele_sizes_bp": [203, 206, 368],
+      "associated_alleles": {
+        "203": {"phenotype": "Lower bitter pit risk", "desirability": "resistant"},
+        "206": {"phenotype": "Intermediate susceptibility", "desirability": "intermediate"},
+        "368": {"phenotype": "Higher bitter pit risk", "desirability": "susceptible"}
+      },
+      "notes": "Associated with calcium uptake and distribution. Combine with BP13 for comprehensive assessment.",
+      "references": [
+        "Buti et al., 2015, Mol Breeding",
+        "Celton et al., 2009, BMC Research Notes"
+      ]
+    },
+    "BP13": {
+      "full_name": "BP13-SSR",
+      "type": "SSR",
+      "chromosome": "8",
+      "linkage_group": "LG08",
+      "position_cM": 30.2,
+      "position_bp_approx": 12800000,
+      "locus": "BP13",
+      "target_trait": "Bitter Pit Susceptibility",
+      "trait_category": "fruit_quality",
+      "forward_primer": "CCTGTTCGCAAACAAGAAGG",
+      "reverse_primer": "GCGTAGTCAATCAAAACATTCG",
+      "dye": "FAM",
+      "allele_sizes_bp": [222, 224, 226, 232, 234, 236, 242, 250, 252, 260],
+      "associated_alleles": {
+        "224": {"phenotype": "Reduced bitter pit risk", "desirability": "resistant"},
+        "232": {"phenotype": "Higher bitter pit susceptibility", "desirability": "susceptible"},
+        "250": {"phenotype": "Variable susceptibility", "desirability": "intermediate"},
+        "252": {"phenotype": "Variable susceptibility", "desirability": "intermediate"}
+      },
+      "notes": "Wide allele range (222-260 bp) indicates substantial genetic variation. Use with BP16.",
+      "references": [
+        "Buti et al., 2015, Mol Breeding",
+        "Thapa et al., 2021, Plant Genome"
+      ]
+    },
+    "MYB10": {
+      "full_name": "MdMYB10 (R2R3-MYB Transcription Factor)",
+      "type": "SSR",
+      "chromosome": "9",
+      "linkage_group": "LG09",
+      "position_cM": 36.8,
+      "position_bp_approx": 16500000,
+      "locus": "MYB10",
+      "target_trait": "Flesh Color",
+      "trait_category": "fruit_quality",
+      "forward_primer": "GGAGGGGAATGAAGAAGAGG",
+      "reverse_primer": "TCCACAGAAGCAAACACTGAC",
+      "dye": "HEX",
+      "allele_sizes_bp": [390, 490],
+      "associated_alleles": {
+        "390": {"phenotype": "White/green flesh", "desirability": "common"},
+        "490": {"phenotype": "Red/pink flesh", "desirability": "desirable"}
+      },
+      "notes": "Regulates anthocyanin biosynthesis. The 490 bp allele activates red pigmentation. Environmental factors influence expression.",
+      "references": [
+        "Espley et al., 2007, Plant Journal",
+        "Chagné et al., 2013, Plant Physiology"
+      ]
+    },
+    "RED_TE": {
+      "full_name": "Red Transposable Element (MdMYB10 promoter)",
+      "type": "SCAR",
+      "chromosome": "9",
+      "linkage_group": "LG09",
+      "position_cM": 37.1,
+      "position_bp_approx": 16600000,
+      "locus": "MdMYB10 promoter",
+      "target_trait": "Skin Color",
+      "trait_category": "fruit_quality",
+      "forward_primer": "GGTCACCCAACCCACACTGGGCCTTG",
+      "reverse_primer": "CGGCCGCAATCGCAAGACGCAGA",
+      "dye": "non-fluorescent",
+      "allele_sizes_bp": [750],
+      "associated_alleles": {
+        "750": {"phenotype": "Red skin (TE insertion present)", "desirability": "desirable"},
+        "NB": {"phenotype": "Non-red skin (no insertion)", "desirability": "varies"}
+      },
+      "notes": "Dominant marker. TE insertion boosts MdMYB10 expression for red skin. Cannot distinguish zygosity.",
+      "references": [
+        "Chagné et al., 2013",
+        "Zhang et al., 2019, Nature Communications"
+      ]
+    },
+    "Md_ACO1": {
+      "full_name": "Md-ACO1 (ACC Oxidase 1)",
+      "type": "SSR",
+      "chromosome": "10",
+      "linkage_group": "LG10",
+      "position_cM": 44.2,
+      "position_bp_approx": 18900000,
+      "locus": "Md-ACO1",
+      "target_trait": "Fruit Firmness / Ethylene",
+      "trait_category": "fruit_quality",
+      "forward_primer": "TGTTACCAATACATTTCAATTCTCG",
+      "reverse_primer": "GCTGATGAATGAGTCGTTGC",
+      "dye": "non-fluorescent",
+      "allele_sizes_bp": [237, 300],
+      "associated_alleles": {
+        "237": {"phenotype": "Reduced ethylene oxidation (firm)", "desirability": "desirable"},
+        "300": {"phenotype": "Standard ethylene oxidation", "desirability": "standard"}
+      },
+      "notes": "Key ethylene pathway enzyme. The 237 bp allele favors firm fruit with extended shelf life.",
+      "references": [
+        "Costa et al., 2005, Euphytica",
+        "Zhu & Barritt, 2008, Tree Genetics & Genomes"
+      ]
+    },
+    "Md_PG1": {
+      "full_name": "Md-PG1 (Polygalacturonase)",
+      "type": "SSR",
+      "chromosome": "10",
+      "linkage_group": "LG10",
+      "position_cM": 45.8,
+      "position_bp_approx": 19500000,
+      "locus": "Md-PG1",
+      "target_trait": "Fruit Texture / Firmness",
+      "trait_category": "fruit_quality",
+      "forward_primer": "TTTCTTCCTTGGGTTTTTGG",
+      "reverse_primer": "CGAAGCCACTCTCCTTCTCC",
+      "dye": "FAM",
+      "allele_sizes_bp": [177, 180, 185, 289, 292, 298],
+      "associated_alleles": {
+        "289": {"phenotype": "Favorable for firmness", "desirability": "desirable"},
+        "292": {"phenotype": "Favorable for firmness", "desirability": "desirable"},
+        "298": {"phenotype": "Softer texture (cell wall degradation)", "desirability": "undesirable"}
+      },
+      "notes": "Encodes polygalacturonase enzyme responsible for cell wall breakdown during ripening.",
+      "references": [
+        "Longhi et al., 2013, BMC Plant Biology",
+        "Costa et al., 2010, J Exp Botany"
+      ]
+    },
+    "Co_INDEL": {
+      "full_name": "Co Indel (Columnar growth habit)",
+      "type": "SCAR",
+      "chromosome": "10",
+      "linkage_group": "LG10",
+      "position_cM": 46.5,
+      "position_bp_approx": 19800000,
+      "locus": "Co",
+      "target_trait": "Columnar Growth Habit",
+      "trait_category": "tree_architecture",
+      "forward_primer": "GGAAAACGAGGGAAAGTACG",
+      "reverse_primer": "CATCAACCAATGCAAGCAAT",
+      "dye": "non-fluorescent",
+      "allele_sizes_bp": [180, 220],
+      "associated_alleles": {
+        "180": {"phenotype": "Columnar growth (Co allele)", "desirability": "desirable"},
+        "220": {"phenotype": "Standard growth (co allele)", "desirability": "standard"}
+      },
+      "notes": "Co-dominant marker for columnar habit from 'Wijcik McIntosh'. Ideal for high-density planting systems (1500-2500 trees/ha).",
+      "references": [
+        "Brown et al., 1998, J Am Soc Hortic Sci",
+        "Velasco et al., 2010, Nat Genet"
+      ]
+    },
+    "Pl2_SSR": {
+      "full_name": "Pl2-linked SSR (Powdery Mildew resistance)",
+      "type": "SSR",
+      "chromosome": "11",
+      "linkage_group": "LG11",
+      "position_cM": 62.3,
+      "position_bp_approx": 24800000,
+      "locus": "Pl2",
+      "target_trait": "Powdery Mildew Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "CCCTTCACTTGCTTCTTTGA",
+      "reverse_primer": "AGGAAGGATTCACGCAAGAT",
+      "dye": "FAM",
+      "allele_sizes_bp": [150, 178, 202, 228],
+      "associated_alleles": {
+        "178": {"phenotype": "Pl2 resistance", "desirability": "resistant"},
+        "150": {"phenotype": "Susceptibility", "desirability": "susceptible"},
+        "202": {"phenotype": "Intermediate", "desirability": "intermediate"}
+      },
+      "notes": "Identified from Malus zumi. Combine with Pl5 (Chr 12) for enhanced resistance.",
+      "references": [
+        "James et al., 1997, Plant Breeding",
+        "Calenge et al., 2005, Theor Appl Genet"
+      ]
+    },
+    "Rvi15_SSR": {
+      "full_name": "Rvi15-linked SSR",
+      "type": "SSR",
+      "chromosome": "11",
+      "linkage_group": "LG11",
+      "position_cM": 58.7,
+      "position_bp_approx": 23100000,
+      "locus": "Rvi15",
+      "target_trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "GCAATGCAATGCAATGCAAT",
+      "reverse_primer": "TTCCTTCCTTCCTTCCTTCC",
+      "dye": "HEX",
+      "allele_sizes_bp": [130, 145, 160],
+      "associated_alleles": {
+        "145": {"phenotype": "Rvi15 resistance", "desirability": "resistant"},
+        "130": {"phenotype": "Susceptibility", "desirability": "susceptible"}
+      },
+      "notes": "Additional scab resistance locus for pyramiding with Vf.",
+      "references": [
+        "Calenge et al., 2005, Theor Appl Genet"
+      ]
+    },
+    "Pl5_SSR": {
+      "full_name": "Pl5-linked SSR (Powdery Mildew resistance)",
+      "type": "SSR",
+      "chromosome": "12",
+      "linkage_group": "LG12",
+      "position_cM": 35.6,
+      "position_bp_approx": 15200000,
+      "locus": "Pl5",
+      "target_trait": "Powdery Mildew Resistance",
+      "trait_category": "disease_resistance",
+      "forward_primer": "AACCAAACCAAACCAAACCAA",
+      "reverse_primer": "GGTGGTGGTGGTGGTATTGT",
+      "dye": "HEX",
+      "allele_sizes_bp": [118, 132, 146],
+      "associated_alleles": {
+        "132": {"phenotype": "Pl5 resistance", "desirability": "resistant"},
+        "118": {"phenotype": "Susceptibility", "desirability": "susceptible"}
+      },
+      "notes": "Pyramid with Pl2 (Chr 11) for durable powdery mildew resistance.",
+      "references": [
+        "Calenge et al., 2005, Theor Appl Genet",
+        "Gardiner et al., 2012, Theor Appl Genet"
+      ]
+    },
+    "Md_ACS1": {
+      "full_name": "Md-ACS1 (ACC Synthase 1)",
+      "type": "SSR",
+      "chromosome": "15",
+      "linkage_group": "LG15",
+      "position_cM": 38.9,
+      "position_bp_approx": 16800000,
+      "locus": "Md-ACS1",
+      "target_trait": "Fruit Firmness / Ethylene",
+      "trait_category": "fruit_quality",
+      "forward_primer": "CGAGGTTGACTCAAATCAAAAC",
+      "reverse_primer": "GCTGATGAATGAGTCGTTGC",
+      "dye": "non-fluorescent",
+      "allele_sizes_bp": [200, 247, 341],
+      "associated_alleles": {
+        "341": {"phenotype": "ACS1-2 (reduced ethylene, firm)", "desirability": "desirable"},
+        "247": {"phenotype": "ACS1-2 variant (firm)", "desirability": "desirable"},
+        "200": {"phenotype": "ACS1-1 (standard ethylene)", "desirability": "standard"}
+      },
+      "notes": "SCAR marker targeting ethylene biosynthesis gene. ACS1-2 allele (341/247 bp) correlates with extended shelf life.",
+      "references": [
+        "Sunako et al., 1999, Plant Physiology",
+        "Costa et al., 2005, Euphytica"
+      ]
+    },
+    "Ma1_SNP": {
+      "full_name": "Ma1/MdALMT9 SNP marker",
+      "type": "SNP",
+      "chromosome": "16",
+      "linkage_group": "LG16",
+      "position_cM": 22.4,
+      "position_bp_approx": 3350000,
+      "locus": "Ma1/MdALMT9",
+      "target_trait": "Fruit Acidity",
+      "trait_category": "fruit_quality",
+      "forward_primer": "KASP assay (designed per population)",
+      "reverse_primer": "KASP assay (designed per population)",
+      "dye": "FAM/HEX (KASP)",
+      "allele_sizes_bp": [],
+      "associated_alleles": {
+        "Ma1/Ma1": {"phenotype": "High acidity (tart)", "desirability": "desirable_for_tart"},
+        "Ma1/ma1": {"phenotype": "Intermediate acidity", "desirability": "intermediate"},
+        "ma1/ma1": {"phenotype": "Low acidity (sweet)", "desirability": "desirable_for_sweet"}
+      },
+      "notes": "Major gene controlling fruit acidity. Encodes MdALMT9 aluminum-activated malate transporter. SNP-based KASP assay recommended for high-throughput screening.",
+      "references": [
+        "Bai et al., 2012, Mol Genet Genomics",
+        "Xu et al., 2012, Mol Breeding",
+        "Bianco et al., 2016, Plant Journal"
+      ]
+    },
+    "Ma1_INDEL": {
+      "full_name": "Ma locus Insertion-Deletion marker",
+      "type": "InDel",
+      "chromosome": "16",
+      "linkage_group": "LG16",
+      "position_cM": 22.8,
+      "position_bp_approx": 3380000,
+      "locus": "Ma1",
+      "target_trait": "Fruit Acidity",
+      "trait_category": "fruit_quality",
+      "forward_primer": "AAATGAACAGGACCCAGACG",
+      "reverse_primer": "ACGACTCCAATCCAACATCC",
+      "dye": "HEX",
+      "allele_sizes_bp": [364, 382, 387, 402, 409, 452, 456, 464],
+      "associated_alleles": {
+        "409": {"phenotype": "High acidity (tart)", "desirability": "desirable_for_tart"},
+        "456": {"phenotype": "Low acidity (sweet)", "desirability": "desirable_for_sweet"},
+        "452": {"phenotype": "Variable acidity", "desirability": "uncharacterized"},
+        "387": {"phenotype": "Rare variant", "desirability": "uncharacterized"},
+        "402": {"phenotype": "Rare variant", "desirability": "uncharacterized"}
+      },
+      "notes": "SCAR marker for Ma locus. The 409 bp allele = high malic acid (tart, good for cider). The 456 bp allele = low acidity (sweet).",
+      "references": [
+        "Bai et al., 2012, Mol Genet Genomics",
+        "Peace et al., 2019, Horticulture Research"
+      ]
+    }
+  },
+  "trait_groups": {
+    "fruit_quality": {
+      "description": "Fruit quality traits including acidity, firmness, crispness, and texture",
+      "markers": ["Ma1_SNP", "Ma1_INDEL", "Ma3_SSR", "Md_ACS1", "Md_ACO1", "Md_PG1", "CRISP_SSR", "BP16", "BP13", "MYB10", "RED_TE"]
+    },
+    "disease_resistance": {
+      "description": "Disease resistance markers for apple scab, powdery mildew, fire blight, and bitter pit susceptibility",
+      "markers": ["AL07", "AM19", "Vf_SCAR", "Rvi2_SSR", "Rvi4_SSR", "Rvi15_SSR", "Pl2_SSR", "Pl5_SSR", "Fb_Mr5", "BP16", "BP13"]
+    },
+    "tree_architecture": {
+      "description": "Vegetative growth architecture traits including columnar habit for high-density planting",
+      "markers": ["Co_INDEL"]
+    },
+    "acidity": {
+      "description": "Fruit acidity controlled by Ma locus aluminum-activated malate transporters",
+      "markers": ["Ma1_SNP", "Ma1_INDEL", "Ma3_SSR"]
+    },
+    "texture": {
+      "description": "Fruit texture traits including firmness, crispness, ethylene production, and cell wall degradation",
+      "markers": ["Md_ACS1", "Md_ACO1", "Md_PG1", "CRISP_SSR"]
+    },
+    "color": {
+      "description": "Skin and flesh color traits controlled by anthocyanin biosynthesis pathways (MYB10)",
+      "markers": ["MYB10", "RED_TE"]
+    },
+    "scab_resistance": {
+      "description": "Apple scab resistance markers for Vf/Rvi6 and additional Rvi loci",
+      "markers": ["AL07", "AM19", "Vf_SCAR", "Rvi2_SSR", "Rvi4_SSR", "Rvi15_SSR"]
+    },
+    "mildew_resistance": {
+      "description": "Powdery mildew resistance markers for Pl2 and Pl5 loci",
+      "markers": ["Pl2_SSR", "Pl5_SSR"]
+    }
+  },
+  "methodology": {
+    "PCR_conditions": {
+      "total_volume_ul": 25,
+      "components": {
+        "PCR_buffer_1x": true,
+        "MgCl2_mM": 1.5,
+        "dNTPs_uM": 200,
+        "primer_each_uM": 0.5,
+        "Taq_polymerase_U": 1,
+        "template_DNA_ng": 50
+      },
+      "thermal_cycling": {
+        "initial_denaturation": {"temp_C": 95, "time_min": 5},
+        "cycles": 30,
+        "denaturation": {"temp_C": 94, "time_sec": 30},
+        "annealing": {"temp_C": 55, "time_sec": 30},
+        "extension": {"temp_C": 72, "time_sec": 60},
+        "final_extension": {"temp_C": 72, "time_min": 10}
+      }
+    },
+    "fragment_analysis": {
+      "platform": "ABI 3130xl Genetic Analyzer or equivalent",
+      "software": "GeneMapper 5.0 or Geneious",
+      "size_standard": "GeneScan 600 LIZ"
+    },
+    "gel_electrophoresis": {
+      "agarose_pct": [1.0, 1.5],
+      "buffer": "1x TAE",
+      "voltage_V": "90-110",
+      "time_min": 60,
+      "stain": "Ethidium bromide 0.5 ug/mL or SYBR Safe"
+    }
+  }
+}
