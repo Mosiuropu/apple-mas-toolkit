@@ -63,7 +63,7 @@ apple-mas-toolkit/
 ## Installation
 
 ```bash
-git clone https://github.com/Mosiuropu/apple-mas-toolkit-hidden.git
+git clone https://github.com/Mosiuropu/apple-mas-toolkit.git
 cd apple-mas-toolkit
 pip install -e .
 ```
@@ -397,7 +397,7 @@ If you use this toolkit in your research, please cite:
   author    = {Md Mosiur Rahman Bhuyin Apu},
   title     = {Apple MAS Toolkit: Marker-Assisted Selection for Apple Breeding},
   year      = {2024},
-  url       = {https://github.com/Mosiuropu/apple-mas-toolkit-hidden}
+  url       = {https://github.com/Mosiuropu/apple-mas-toolkit}
 }
 ```
 

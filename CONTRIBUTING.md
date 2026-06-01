@@ -32,7 +32,7 @@ Thank you for your interest in contributing to the Apple MAS Toolkit! This guide
 
 ```bash
 # Clone the repository
-git clone https://github.com/Mosiuropu/apple-mas-toolkit-hidden.git
+git clone https://github.com/Mosiuropu/apple-mas-toolkit.git
 cd apple-mas-toolkit
 
 # Create a virtual environment
