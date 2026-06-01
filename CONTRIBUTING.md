@@ -69,10 +69,10 @@ pytest tests/test_all.py -v
 
 To add a new marker to the database:
 
-1. Edit `data/marker_database/apple_markers.json`
-2. Add the marker entry with all required fields
-3. Update `trait_groups` and `chromosomal_locations`
-4. Add tests for the new marker
+1. Edit `data/apple_marker_map.json` (new comprehensive 17-chromosome database)
+2. Add the marker entry with all required fields: `Marker_Name`, `Type`, `Chromosome`, `Position_cM`, `Forward_Primer`, `Reverse_Primer`, `Target_Trait`, `Associated_Allele`
+3. Update `trait_groups` if adding a new trait category
+4. Add tests in `tests/test_all.py`
 5. Update documentation in `docs/marker_reference.md`
 
 ## Documentation

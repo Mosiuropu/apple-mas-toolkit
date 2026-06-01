@@ -13,7 +13,7 @@ This guide walks you through setting up and using the Apple MAS Toolkit.
 ### Option 1: Install from source (recommended)
 
 ```bash
-git clone https://github.com/mosiurrahmanapu/apple-mas-toolkit.git
+git clone https://github.com/Mosiuropu/apple-mas-toolkit.git
 cd apple-mas-toolkit
 pip install -e .
 ```
@@ -51,6 +51,27 @@ apple-mas info --search "texture"
 
 # View PCR methodology
 apple-mas info --pcr
+```
+
+**New modules** (imported directly):
+
+```python
+# Chromosome-aware marker query
+from src.marker_selector import MarkerSelector
+
+selector = MarkerSelector()
+print(selector.list_chromosomes())     # All 17 chromosomes
+markers = selector.markers_by_trait("fruit_quality")  # Filter by trait
+manifest = selector.genotyping_manifest(traits=["disease_resistance"], population_type="BC1")
+print(manifest)  # Full primer manifest
+
+# Statistical analysis
+from src.breeding_analytics import (
+    segregation_distortion_test,
+    calculate_pic,
+    genotype_phenotype_boxplot,
+    batch_pic,
+)
 ```
 
 ### 3. Analyze Your Data
@@ -240,7 +261,8 @@ Accessions are scored based on:
 - Use `sample_col`, `marker_col`, and `genotype_col` parameters to specify column names
 
 **"Marker not found" error**
-- Ensure marker names match exactly: MYB10, RED_TE, MA_INDEL, BP16, BP13, ACS, ACO, MD_PG1
+- Ensure marker names match exactly. Legacy markers: MYB10, RED_TE, MA_INDEL, BP16, BP13, ACS, ACO, MD_PG1, Vf_SCAR, AL07, PL2_SSR, CO_INDEL, CRISP_SSR
+- New markers: Ma1_SNP, Ma1_INDEL, Md_ACS1, Md_ACO1, Md_PG1, Vf_SCAR, AL07, AM19, Pl2_SSR, Pl5_SSR, Co_INDEL, CRISP_SSR, BP16, BP13, MYB10, RED_TE
 - Check for typos or different naming conventions
 
 **Plots not displaying**

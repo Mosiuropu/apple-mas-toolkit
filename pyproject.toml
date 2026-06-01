@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apple-mas-toolkit"
-version = "1.0.0"
+version = "3.0.0"
 description = "Marker-Assisted Selection (MAS) Toolkit for Apple (Malus × domestica) Molecular Breeding — an educational and research resource for students and breeders"
 readme = "README.md"
 license = {text = "MIT"}
