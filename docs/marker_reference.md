@@ -17,10 +17,10 @@ Complete reference for all molecular markers included in the Apple MAS Toolkit.
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Frequency (ANABP) | Desirability |
-|-------------|-----------|-------------------|--------------|
-| 390 | White/green flesh | 97.92% | Common |
-| 490 | Red/pink flesh | 2.08% | Desirable |
+| Allele (bp) | Phenotype | Desirability |
+|-------------|-----------|--------------|
+| 390 | White/green flesh | Common |
+| 490 | Red/pink flesh | Desirable |
 
 ### Genotype Interpretation
 
@@ -62,10 +62,10 @@ MYB10 is a member of the R2R3-MYB transcription factor family, essential for reg
 
 ### Allele Definitions
 
-| Allele | Phenotype | Frequency (ANABP) | Desirability |
-|--------|-----------|-------------------|--------------|
-| 750 | Red skin | 64.06% | Desirable |
-| NB | Non-red skin | 33.33% | Varies |
+| Allele | Phenotype | Desirability |
+|--------|-----------|--------------|
+| 750 | Red skin | Desirable |
+| NB | Non-red skin | Varies |
 
 ### Biological Context
 
@@ -104,13 +104,13 @@ RED TE targets a transposable element insertion within the MdMYB10 promoter regi
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Acidity Effect | Frequency (ANABP) | Desirability |
-|-------------|-----------|----------------|-------------------|--------------|
-| 409 | High acidity | High malic acid | 8.0% | Desirable (tart) |
-| 456 | Low acidity | Low malic acid | 10.0% | Desirable (sweet) |
-| 452 | Variable | Intermediate | 5.21% | Needs characterization |
-| 387 | Rare | Variable | 6.25% | Needs characterization |
-| 402 | Rare | Variable | 6.25% | Needs characterization |
+| Allele (bp) | Phenotype | Acidity Effect | Desirability |
+|-------------|-----------|----------------|--------------|
+| 409 | High acidity | High malic acid | Desirable (tart) |
+| 456 | Low acidity | Low malic acid | Desirable (sweet) |
+| 452 | Variable | Intermediate | Needs characterization |
+| 387 | Rare | Variable | Needs characterization |
+| 402 | Rare | Variable | Needs characterization |
 
 ### Genotype Interpretation
 
@@ -155,11 +155,11 @@ The Ma locus is defined in a 150 kb region containing 44 predicted genes on chro
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Frequency (ANABP) | Desirability |
-|-------------|-----------|-------------------|--------------|
-| 203 | Lower susceptibility (resistance) | 22.0% | Desirable |
-| 206 | Intermediate susceptibility | 6.0% | Acceptable |
-| 368 | Higher susceptibility | 45.0% | Undesirable |
+| Allele (bp) | Phenotype | Desirability |
+|-------------|-----------|--------------|
+| 203 | Lower susceptibility (resistance) | Desirable |
+| 206 | Intermediate susceptibility | Acceptable |
+| 368 | Higher susceptibility | Undesirable |
 
 ### Genotype Interpretation
 
@@ -199,12 +199,12 @@ The Ma locus is defined in a 150 kb region containing 44 predicted genes on chro
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Frequency (ANABP) | Desirability |
-|-------------|-----------|-------------------|--------------|
-| 224 | Reduced risk | 10.42% | Desirable |
-| 232 | Higher susceptibility | 30.21% | Undesirable |
-| 250 | Variable | 15.0% | Intermediate |
-| 252 | Variable | 5.0% | Intermediate |
+| Allele (bp) | Phenotype | Desirability |
+|-------------|-----------|--------------|
+| 224 | Reduced risk | Desirable |
+| 232 | Higher susceptibility | Undesirable |
+| 250 | Variable | Intermediate |
+| 252 | Variable | Intermediate |
 
 ### Breeding Notes
 
@@ -231,10 +231,10 @@ The Ma locus is defined in a 150 kb region containing 44 predicted genes on chro
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Effect | Frequency (ANABP) | Desirability |
-|-------------|-----------|--------|-------------------|--------------|
-| 200 | Md-ACS1-1 | Standard ethylene | 38.0% | Standard |
-| 341 | Md-ACS1-2 | Reduced ethylene | 38.0% | Desirable |
+| Allele (bp) | Phenotype | Effect | Desirability |
+|-------------|-----------|--------|--------------|
+| 200 | Md-ACS1-1 | Standard ethylene | Standard |
+| 341 | Md-ACS1-2 | Reduced ethylene | Desirable |
 
 ### Genotype Interpretation
 
@@ -268,10 +268,10 @@ The Ma locus is defined in a 150 kb region containing 44 predicted genes on chro
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Effect | Frequency (ANABP) | Desirability |
-|-------------|-----------|--------|-------------------|--------------|
-| 237 | ACO1-1 | Reduced ethylene oxidation | 23.0% | Desirable |
-| 300 | ACO1-2 | Standard ethylene oxidation | 67.0% | Standard |
+| Allele (bp) | Phenotype | Effect | Desirability |
+|-------------|-----------|--------|--------------|
+| 237 | ACO1-1 | Reduced ethylene oxidation | Desirable |
+| 300 | ACO1-2 | Standard ethylene oxidation | Standard |
 
 ### Genotype Interpretation
 
@@ -306,11 +306,11 @@ The Ma locus is defined in a 150 kb region containing 44 predicted genes on chro
 
 ### Allele Definitions
 
-| Allele (bp) | Phenotype | Frequency (ANABP) | Desirability |
-|-------------|-----------|-------------------|--------------|
-| 289 | Favorable for firmness | 20.0% | Desirable |
-| 292 | Favorable for firmness | 20.0% | Desirable |
-| 298 | Softer texture | 25.0% | Less desirable |
+| Allele (bp) | Phenotype | Desirability |
+|-------------|-----------|--------------|
+| 289 | Favorable for firmness | Desirable |
+| 292 | Favorable for firmness | Desirable |
+| 298 | Softer texture | Less desirable |
 
 ### Genotype Interpretation
 

@@ -32,7 +32,7 @@ pip install -e ".[dev,notebooks]"
 apple-mas sample-data --output sample_data/
 ```
 
-This creates a realistic sample dataset based on ANABP germplasm patterns.
+This creates a realistic synthetic sample dataset with representative apple marker genotypes.
 
 ### 2. Explore the Marker Database
 
@@ -208,8 +208,8 @@ notes = db.get_breeding_notes("MYB10")
 
 | allele | count | frequency |
 |--------|-------|-----------|
-| 390    | 95    | 0.979     |
-| 490    | 2     | 0.021     |
+| 390    | 95    | 0.950     |
+| 490    | 5     | 0.050     |
 
 ### Genotype Distribution Output
 

@@ -237,9 +237,8 @@ class DataParser:
     def create_sample_dataset(self) -> Tuple[pd.DataFrame, Dict[str, Dict[str, str]]]:
         """Create a sample dataset for demonstration and testing.
 
-        Returns a realistic dataset based on ANABP germplasm patterns,
-        with genotype distributions similar to those reported in the
-        Australian National Apple Breeding Program.
+        Returns a realistic synthetic dataset with genotype distributions
+        representative of typical apple breeding populations.
 
         Returns
         -------
@@ -250,7 +249,7 @@ class DataParser:
         random.seed(42)
 
         n_samples = 50
-        sample_ids = [f"ANABP_{i:03d}" for i in range(1, n_samples + 1)]
+        sample_ids = [f"SAMPLE_{i:03d}" for i in range(1, n_samples + 1)]
 
         raw_data = {}
         for sid in sample_ids:

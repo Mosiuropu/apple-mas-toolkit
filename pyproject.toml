@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "apple-mas-toolkit"
 version = "1.0.0"
-description = "Apple Marker-Assisted Selection (MAS) Toolkit for fruit quality trait analysis in apple breeding programs"
+description = "Marker-Assisted Selection (MAS) Toolkit for Apple (Malus × domestica) Molecular Breeding — an educational and research resource for students and breeders"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.9"
@@ -48,10 +48,10 @@ notebooks = [
 apple-mas = "apple_mas.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/mosiurrahmanapu/apple-mas-toolkit"
-Documentation = "https://github.com/mosiurrahmanapu/apple-mas-toolkit#readme"
-Repository = "https://github.com/mosiurrahmanapu/apple-mas-toolkit"
-Issues = "https://github.com/mosiurrahmanapu/apple-mas-toolkit/issues"
+Homepage = "https://github.com/Mosiuropu/apple-mas-toolkit"
+Documentation = "https://github.com/Mosiuropu/apple-mas-toolkit#readme"
+Repository = "https://github.com/Mosiuropu/apple-mas-toolkit"
+Issues = "https://github.com/Mosiuropu/apple-mas-toolkit/issues"
 
 [tool.setuptools.packages.find]
 include = ["apple_mas*"]

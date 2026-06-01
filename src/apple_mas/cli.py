@@ -2,10 +2,12 @@
 Command-line interface for Apple MAS Toolkit.
 
 Provides commands for analyzing genotype data, scoring accessions,
-generating reports, and visualizing results.
+generating reports, visualizing results, selecting markers, and
+running analytics.
 """
 
 import argparse
+import json
 import os
 import sys
 
@@ -20,7 +22,11 @@ def main():
 Examples:
   apple-mas info                        Show marker database summary
   apple-mas info --marker MYB10         Show details for a specific marker
+  apple-mas select --traits fruit_quality disease_resistance
+  apple-mas select --traits growth_habit --plan-out plan.json
   apple-mas analyze --input data.csv    Analyze genotype data
+  apple-mas analytics --input data.csv --test segregation
+  apple-mas analytics --input data.csv --test pic
   apple-mas rank --input data.csv --profile premium_table
   apple-mas visualize --input data.csv  Generate all plots
   apple-mas sample-data                 Create sample dataset for testing
@@ -72,6 +78,34 @@ Examples:
     sample_parser.add_argument("--output", "-o", default="sample_data", help="Output directory")
     sample_parser.add_argument("--format", "-f", choices=["csv", "excel", "both"], default="both", help="Output format")
 
+    # --- select command ---
+    select_parser = subparsers.add_parser("select", help="Select markers by target trait and build a genotyping plan")
+    select_parser.add_argument("--traits", "-t", nargs="+", required=True,
+                               help="Target trait categories (e.g., fruit_quality disease_resistance growth_habit)")
+    select_parser.add_argument("--population", "-p", default="F1",
+                               choices=["F1", "BC1", "BC2", "F2", "RIL", "open_pollinated"],
+                               help="Population type")
+    select_parser.add_argument("--size", "-s", type=int, help="Expected population size")
+    select_parser.add_argument("--extra-markers", nargs="*", help="Additional marker names to include")
+    select_parser.add_argument("--plan-out", default=None, help="Export plan to JSON file")
+    select_parser.add_argument("--csv-out", default=None, help="Export marker table to CSV file")
+    select_parser.add_argument("--json", action="store_true", help="Output plan as JSON to stdout")
+
+    # --- analytics command ---
+    analytics_parser = subparsers.add_parser("analytics", help="Run analytics on genotype data")
+    analytics_parser.add_argument("--input", "-i", required=True, help="Input CSV/Excel file")
+    analytics_parser.add_argument("--format", "-f", choices=["csv", "wide"], default="csv",
+                                  help="Input format")
+    analytics_parser.add_argument("--test", choices=["segregation", "pic", "all"], default="all",
+                                  help="Analytics test to run")
+    analytics_parser.add_argument("--marker", "-m", help="Analyze a specific marker only")
+    analytics_parser.add_argument("--population", "-p", default="F1",
+                                  choices=["F1", "BC1", "BC2", "F2"],
+                                  help="Population type for segregation test")
+    analytics_parser.add_argument("--output", "-o", help="Output directory for results")
+    analytics_parser.add_argument("--plot", action="store_true", help="Generate boxplot plots")
+    analytics_parser.add_argument("--json", action="store_true", help="Output as JSON")
+
     # --- report command ---
     report_parser = subparsers.add_parser("report", help="Generate comprehensive analysis report")
     report_parser.add_argument("--input", "-i", required=True, help="Input CSV/Excel file")
@@ -87,8 +121,12 @@ Examples:
     # Dispatch commands
     if args.command == "info":
         _cmd_info(args)
+    elif args.command == "select":
+        _cmd_select(args)
     elif args.command == "analyze":
         _cmd_analyze(args)
+    elif args.command == "analytics":
+        _cmd_analytics(args)
     elif args.command == "rank":
         _cmd_rank(args)
     elif args.command == "visualize":
@@ -147,6 +185,138 @@ def _cmd_info(args):
             print(f"  {marker:12s} | Chr {info.get('chromosome', '?'):2s} | {info['marker_type']:4s} | {info['trait']}")
     else:
         print(db.summary())
+
+
+def _cmd_select(args):
+    """Select markers and build a genotyping plan."""
+    from apple_mas.selector import MarkerSelector
+
+    selector = MarkerSelector()
+
+    # List available traits if requested
+    if not args.traits or (len(args.traits) == 1 and args.traits[0] == "list"):
+        traits_df = selector.list_available_traits()
+        print("\nAvailable trait categories:")
+        print(traits_df.to_string(index=False))
+        return
+
+    # Build the plan
+    try:
+        plan = selector.build_genotyping_plan(
+            target_traits=args.traits,
+            population_type=args.population,
+            population_size=args.size,
+            additional_markers=args.extra_markers,
+        )
+    except ValueError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    # Print summary
+    print(selector.plan_summary(plan))
+
+    # Export
+    if args.plan_out:
+        path = selector.export_plan(plan, args.plan_out, fmt="json")
+        print(f"  Plan exported to: {path}")
+
+    if args.csv_out:
+        path = selector.export_plan(plan, args.csv_out, fmt="csv")
+        print(f"  Marker table exported to: {path}")
+
+    if args.json:
+        print(json.dumps(plan, indent=2, default=str))
+
+
+def _cmd_analytics(args):
+    """Run analytics on genotype data."""
+    from apple_mas.data_parser import DataParser
+    from apple_mas.analytics import (
+        batch_segregation_test,
+        batch_pic,
+        segregation_distortion_from_df,
+        calculate_pic_from_df,
+    )
+
+    data_parser = DataParser()
+    try:
+        if args.format == "wide":
+            df = data_parser.from_wide_csv(args.input)
+        else:
+            df = data_parser.from_csv(args.input)
+    except Exception as e:
+        print(f"Error loading data: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    n_samples = df["sample_id"].nunique()
+    n_markers = df["marker"].nunique()
+    print(f"Loaded {len(df)} records for {n_samples} samples across {n_markers} markers\n")
+
+    if args.marker:
+        markers = [args.marker]
+    else:
+        markers = sorted(df["marker"].unique())
+
+    results = {}
+
+    if args.test in ("segregation", "all"):
+        print("=" * 60)
+        print("  Segregation Distortion Tests")
+        print("=" * 60)
+        if args.marker:
+            result = segregation_distortion_from_df(df, args.marker, population_type=args.population)
+            print(f"\n  Marker: {args.marker}")
+            print(f"  Population: {result['population_type']}")
+            print(f"  Chi-squared: {result['chi2']}")
+            print(f"  p-value: {result['p_value']}")
+            print(f"  Significant distortion: {result['significant']}")
+            print(f"  {result['interpretation']}")
+            results["segregation"] = {args.marker: result}
+        else:
+            seg_df = batch_segregation_test(df, population_type=args.population)
+            for _, row in seg_df.iterrows():
+                sig = "***" if row["significant"] else "ns"
+                print(f"  {row['marker']:12s}  chi2={row['chi2']:8.3f}  p={row['p_value']:.4f}  [{sig}]")
+            print()
+            results["segregation"] = seg_df.to_dict(orient="records")
+            if args.output:
+                os.makedirs(args.output, exist_ok=True)
+                seg_df.to_csv(os.path.join(args.output, "segregation_tests.csv"), index=False)
+                print(f"  Saved to {args.output}/segregation_tests.csv")
+        print()
+
+    if args.test in ("pic", "all"):
+        print("=" * 60)
+        print("  Polymorphism Information Content (PIC)")
+        print("=" * 60)
+        if args.marker:
+            pic = calculate_pic_from_df(df, args.marker)
+            print(f"\n  Marker: {args.marker}")
+            print(f"  PIC: {pic:.6f}")
+            results["pic"] = {args.marker: pic}
+        else:
+            pic_df = batch_pic(df)
+            for _, row in pic_df.iterrows():
+                print(f"  {row['marker']:12s}  alleles={row['n_alleles']:3d}  PIC={row['PIC']:.6f}")
+            print()
+            results["pic"] = pic_df.to_dict(orient="records")
+            if args.output:
+                os.makedirs(args.output, exist_ok=True)
+                pic_df.to_csv(os.path.join(args.output, "pic_results.csv"), index=False)
+                print(f"  Saved to {args.output}/pic_results.csv")
+        print()
+
+    if args.plot:
+        from apple_mas.analytics import genotype_phenotype_boxplot
+        plot_dir = args.output or "analytics_plots"
+        os.makedirs(plot_dir, exist_ok=True)
+        print("Generating boxplots (requires external phenotype data)...")
+        print("  Note: Boxplots require paired genotype-phenotype data.")
+        print("  Use the Python API for custom boxplot generation.")
+        print()
+
+    if args.json:
+        print(json.dumps(results, indent=2, default=str))
 
 
 def _cmd_analyze(args):

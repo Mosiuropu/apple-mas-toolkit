@@ -1,13 +1,16 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Apple Molecular Marker Database for Marker-Assisted Selection (MAS)",
   "organism": "Malus domestica Borkh.",
+  "reference_genome": "Golden Delicious v1.0 (Daccord et al., 2014)",
+  "nomenclature_standard": "GDR (Genome Database for Rosaceae) conventions",
   "markers": {
     "MYB10": {
       "full_name": "MdMYB10",
       "trait": "Flesh Color",
       "trait_category": "color",
       "chromosome": 9,
+      "lg": "LG09",
       "marker_type": "SSR",
       "probe_type": "fluorescent",
       "dye": "HEX",
@@ -21,14 +24,12 @@
           "phenotype": "White/green flesh",
           "genotype_description": "Homozygous 390:390",
           "anthocyanin_level": "low",
-          "frequency_in_ANABP": 0.9792,
           "desirability": "common"
         },
         "490": {
           "phenotype": "Red/pink flesh",
           "genotype_description": "Associated with red flesh trait",
           "anthocyanin_level": "high",
-          "frequency_in_ANABP": 0.0208,
           "desirability": "desirable"
         }
       },
@@ -40,7 +41,7 @@
       "notes": "MYB10 is an R2R3-MYB transcription factor regulating anthocyanin biosynthesis. The 490 bp allele activates genes involved in red pigmentation of flesh.",
       "references": [
         "Espley et al., 2007, Plant Journal",
-        "Chagné et al., 2013, Plant Physiology",
+        "Chagne et al., 2013, Plant Physiology",
         "Bars-Cortina et al., 2017, J Agric Food Chem"
       ],
       "breeding_notes": "Red flesh is rare in commercial germplasm. Heterozygous 390:490 accessions are valuable breeding resources. Environmental conditions (light, temperature) influence expression."
@@ -50,6 +51,7 @@
       "trait": "Skin Color",
       "trait_category": "color",
       "chromosome": 9,
+      "lg": "LG09",
       "marker_type": "SCAR",
       "probe_type": "non-fluorescent",
       "primer_sequences": {
@@ -61,13 +63,11 @@
         "750": {
           "phenotype": "Red skin",
           "description": "Presence of 750 bp band indicates RED TE insertion in MdMYB10 promoter",
-          "frequency_in_ANABP": 0.6406,
           "desirability": "desirable"
         },
         "NB": {
           "phenotype": "Non-red skin",
           "description": "No band (absence of 750 bp fragment)",
-          "frequency_in_ANABP": 0.3333,
           "desirability": "varies"
         }
       },
@@ -82,7 +82,7 @@
         "Environmental factors (light, temperature) affect final skin color expression"
       ],
       "references": [
-        "Chagné et al., 2013",
+        "Chagne et al., 2013",
         "Zhang et al., 2019, Nature Communications",
         "Moriya et al., 2017, Euphytica",
         "Wang et al., 2023, Horticulturae"
@@ -94,6 +94,7 @@
       "trait": "Fruit Acidity",
       "trait_category": "acidity",
       "chromosome": 16,
+      "lg": "LG16",
       "marker_type": "SCAR",
       "probe_type": "fluorescent",
       "dye": "HEX",
@@ -104,11 +105,11 @@
       "allele_sizes_bp": [364, 382, 387, 402, 409, 452, 456, 464],
       "primary_alleles": [409, 456],
       "allele_definitions": {
-        "387": {"phenotype": "Rare variant", "acidity_effect": "variable", "frequency_in_ANABP": 0.0625, "desirability": "needs_characterization"},
-        "402": {"phenotype": "Rare variant", "acidity_effect": "variable", "frequency_in_ANABP": 0.0625, "desirability": "needs_characterization"},
-        "409": {"phenotype": "High acidity", "acidity_effect": "high malic acid", "frequency_in_ANABP": 0.08, "desirability": "desirable_for_tart"},
-        "452": {"phenotype": "Variable acidity", "acidity_effect": "intermediate", "frequency_in_ANABP": 0.0521, "desirability": "needs_characterization"},
-        "456": {"phenotype": "Low acidity", "acidity_effect": "low malic acid", "frequency_in_ANABP": 0.10, "desirability": "desirable_for_sweet"}
+        "387": {"phenotype": "Rare variant", "acidity_effect": "variable", "desirability": "needs_characterization"},
+        "402": {"phenotype": "Rare variant", "acidity_effect": "variable", "desirability": "needs_characterization"},
+        "409": {"phenotype": "High acidity", "acidity_effect": "high malic acid", "desirability": "desirable_for_tart"},
+        "452": {"phenotype": "Variable acidity", "acidity_effect": "intermediate", "desirability": "needs_characterization"},
+        "456": {"phenotype": "Low acidity", "acidity_effect": "low malic acid", "desirability": "desirable_for_sweet"}
       },
       "genotype_interpretation": {
         "409:409": {"phenotype": "High acidity", "flavor": "Tart"},
@@ -132,6 +133,7 @@
       "trait": "Bitter Pit Susceptibility",
       "trait_category": "disease_resistance",
       "chromosome": 8,
+      "lg": "LG08",
       "marker_type": "SSR",
       "probe_type": "fluorescent",
       "dye": "FAM",
@@ -144,18 +146,15 @@
         "203": {
           "phenotype": "Lower bitter pit susceptibility (resistance)",
           "mechanism": "Associated with favorable calcium distribution",
-          "frequency_in_ANABP": 0.22,
           "desirability": "desirable"
         },
         "206": {
           "phenotype": "Intermediate susceptibility",
-          "frequency_in_ANABP": 0.06,
           "desirability": "acceptable"
         },
         "368": {
           "phenotype": "Higher bitter pit susceptibility",
           "mechanism": "Associated with impaired calcium uptake/distribution",
-          "frequency_in_ANABP": 0.45,
           "desirability": "undesirable"
         }
       },
@@ -180,6 +179,7 @@
       "trait": "Bitter Pit Susceptibility",
       "trait_category": "disease_resistance",
       "chromosome": 8,
+      "lg": "LG08",
       "marker_type": "SSR",
       "probe_type": "fluorescent",
       "dye": "FAM",
@@ -189,10 +189,10 @@
       },
       "allele_sizes_bp": [222, 224, 226, 232, 234, 236, 242, 250, 252, 260],
       "allele_definitions": {
-        "224": {"phenotype": "Reduced bitter pit risk", "frequency_in_ANABP": 0.1042, "desirability": "desirable"},
-        "232": {"phenotype": "Higher bitter pit susceptibility", "frequency_in_ANABP": 0.3021, "desirability": "undesirable"},
-        "250": {"phenotype": "Variable susceptibility", "frequency_in_ANABP": 0.15, "desirability": "intermediate"},
-        "252": {"phenotype": "Variable susceptibility", "frequency_in_ANABP": 0.05, "desirability": "intermediate"}
+        "224": {"phenotype": "Reduced bitter pit risk", "desirability": "desirable"},
+        "232": {"phenotype": "Higher bitter pit susceptibility", "desirability": "undesirable"},
+        "250": {"phenotype": "Variable susceptibility", "desirability": "intermediate"},
+        "252": {"phenotype": "Variable susceptibility", "desirability": "intermediate"}
       },
       "genotype_interpretation": {
         "224:232": {"phenotype": "Moderate susceptibility"},
@@ -211,6 +211,7 @@
       "trait": "Fruit Texture / Ethylene Production",
       "trait_category": "texture",
       "chromosome": 10,
+      "lg": "LG10",
       "marker_type": "SCAR",
       "probe_type": "non-fluorescent",
       "primer_sequences": {
@@ -223,14 +224,12 @@
           "phenotype": "Md-ACS1-1 allele",
           "effect": "Standard ethylene production",
           "firmness": "Standard",
-          "frequency_in_ANABP": 0.38,
           "desirability": "standard"
         },
         "341": {
           "phenotype": "Md-ACS1-2 allele",
           "effect": "Reduced ethylene production",
           "firmness": "Increased (longer shelf life)",
-          "frequency_in_ANABP": 0.38,
           "desirability": "desirable"
         }
       },
@@ -252,6 +251,7 @@
       "trait": "Fruit Texture / Ethylene Production",
       "trait_category": "texture",
       "chromosome": 10,
+      "lg": "LG10",
       "marker_type": "SCAR",
       "probe_type": "non-fluorescent",
       "primer_sequences": {
@@ -264,14 +264,12 @@
           "phenotype": "ACO1-1 allele",
           "effect": "Reduced ethylene oxidation",
           "firmness": "Increased",
-          "frequency_in_ANABP": 0.23,
           "desirability": "desirable"
         },
         "300": {
           "phenotype": "ACO1-2 allele",
           "effect": "Standard ethylene oxidation",
           "firmness": "Standard",
-          "frequency_in_ANABP": 0.67,
           "desirability": "standard"
         }
       },
@@ -292,6 +290,7 @@
       "trait": "Fruit Texture / Firmness",
       "trait_category": "texture",
       "chromosome": 10,
+      "lg": "LG10",
       "marker_type": "SSR",
       "probe_type": "fluorescent",
       "dye": "FAM",
@@ -301,9 +300,9 @@
       },
       "allele_sizes_bp": [177, 180, 185, 289, 292, 298],
       "allele_definitions": {
-        "289": {"phenotype": "Favorable for firmness", "frequency_in_ANABP": 0.20, "desirability": "desirable"},
-        "292": {"phenotype": "Favorable for firmness", "frequency_in_ANABP": 0.20, "desirability": "desirable"},
-        "298": {"phenotype": "Softer texture (linked to polygalacturonase activity)", "frequency_in_ANABP": 0.25, "desirability": "less_desirable"}
+        "289": {"phenotype": "Favorable for firmness", "desirability": "desirable"},
+        "292": {"phenotype": "Favorable for firmness", "desirability": "desirable"},
+        "298": {"phenotype": "Softer texture (linked to polygalacturonase activity)", "desirability": "less_desirable"}
       },
       "genotype_interpretation": {
         "289:292": {"phenotype": "Firm fruit", "cell_wall": "Intact", "frequency": "Most common (20.83%)"},
@@ -319,6 +318,237 @@
         "Ru et al., 2021"
       ],
       "breeding_notes": "Alleles 289 and 292 are favorable for firmness. The 298:298 genotype should be avoided for breeding firm-textured cultivars. Best combined with ACS and ACO for comprehensive texture prediction."
+    },
+    "Vf_SCAR": {
+      "full_name": "Vf/Rvi6 SCAR (Venturia inaequalis resistance)",
+      "trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "chromosome": 1,
+      "lg": "LG01",
+      "marker_type": "SCAR",
+      "probe_type": "non-fluorescent",
+      "primer_sequences": {
+        "forward": "ATGAGAAGAAATCAATGGAATCG",
+        "reverse": "TAAGTATCCCAAATTGCATCTGA"
+      },
+      "allele_sizes_bp": [200, 280],
+      "allele_definitions": {
+        "200": {
+          "phenotype": "Vf allele present (scab resistance)",
+          "mechanism": "Contains Rvi6 (Vf) R-gene encoding HMA domain protein",
+          "desirability": "desirable"
+        },
+        "NB": {
+          "phenotype": "Vf allele absent (scab susceptible)",
+          "description": "No amplification of resistance-associated band",
+          "desirability": "undesirable"
+        }
+      },
+      "genotype_interpretation": {
+        "200": {"phenotype": "Resistance allele present (dominant marker)", "resistance": "Vf-mediated resistance to apple scab"},
+        "NB": {"phenotype": "No resistance allele detected", "resistance": "Susceptible to Venturia inaequalis races overcoming Vf"}
+      },
+      "notes": "The Vf locus (Rvi6) on chromosome 1 was introgressed from Malus micromalus and confers broad-spectrum resistance to apple scab (Venturia inaequalis). This SCAR marker detects the presence/absence of the resistance allele. Note: some races of V. inaequalis can overcome Vf resistance, so pyramiding with additional R-genes is recommended.",
+      "limitations": [
+        "Dominant marker; cannot distinguish homozygous from heterozygous",
+        "Does not confer resistance to all V. inaequalis races",
+        "Field validation under high disease pressure recommended"
+      ],
+      "references": [
+        "Gianfranceschi et al., 1999, Theor Appl Genet",
+        "Seglias et al., 1998, Plant Breeding",
+        "Bus et al., 2005, Theor Appl Genet",
+        "Calenge & Durel, 2006, Theor Appl Genet"
+      ],
+      "breeding_notes": "Vf is the most widely deployed apple scab resistance gene in breeding programs. For durable resistance, pyramid with other Rvi loci (e.g., Rvi2, Rvi4, Rvi5, Rvi15). Marker-assisted backcrossing is the standard strategy for introgressing Vf into elite cultivars."
+    },
+    "AL07": {
+      "full_name": "AL07 SSR (Vf-linked microsatellite)",
+      "trait": "Apple Scab Resistance",
+      "trait_category": "disease_resistance",
+      "chromosome": 1,
+      "lg": "LG01",
+      "marker_type": "SSR",
+      "probe_type": "fluorescent",
+      "dye": "FAM",
+      "primer_sequences": {
+        "forward": "AAGTTTCCATTTCCATTTCCA",
+        "reverse": "CTTCCTTTTCAGATCAATCAG"
+      },
+      "allele_sizes_bp": [142, 161, 183, 205],
+      "allele_definitions": {
+        "161": {
+          "phenotype": "Linked to Vf resistance allele",
+          "linkage": "Co-segregates with Vf/Rvi6 locus",
+          "desirability": "desirable"
+        },
+        "142": {
+          "phenotype": "Susceptibility-associated allele",
+          "linkage": "Linked to susceptible haplotype",
+          "desirability": "undesirable"
+        },
+        "183": {
+          "phenotype": "Variable association",
+          "linkage": "Recombination events possible",
+          "desirability": "intermediate"
+        },
+        "205": {
+          "phenotype": "Rare variant",
+          "linkage": "Requires validation",
+          "desirability": "needs_characterization"
+        }
+      },
+      "genotype_interpretation": {
+        "161:161": {"phenotype": "Likely homozygous Vf", "resistance": "Strong Vf-associated resistance"},
+        "142:161": {"phenotype": "Heterozygous at AL07", "resistance": "Vf present on one haplotype"},
+        "142:142": {"phenotype": "Likely no Vf allele", "resistance": "Susceptible"}
+      },
+      "notes": "Co-dominant SSR marker closely linked to the Vf/Rvi6 locus on chromosome 1. Provides higher resolution than SCAR markers because it can distinguish homozygous from heterozygous genotypes. Useful for confirming Vf zygosity in breeding populations.",
+      "references": [
+        "Gianfranceschi et al., 1998, Mol Breeding",
+        "Kato et al., 2001, Euphytica",
+        "Bus et al., 2005, Theor Appl Genet"
+      ],
+      "breeding_notes": "Use AL07 in combination with Vf_SCAR for comprehensive genotyping at the Vf locus. Co-dominant nature enables detection of heterozygous carriers. Suitable for foreground selection in marker-assisted backcrossing programs."
+    },
+    "PL2_SSR": {
+      "full_name": "Pl2-linked SSR (Powdery Mildew resistance)",
+      "trait": "Powdery Mildew Resistance",
+      "trait_category": "disease_resistance",
+      "chromosome": 11,
+      "lg": "LG11",
+      "marker_type": "SSR",
+      "probe_type": "fluorescent",
+      "dye": "FAM",
+      "primer_sequences": {
+        "forward": "CCCTTCACTTGCTTCTTTGA",
+        "reverse": "AGGAAGGATTCACGCAAGAT"
+      },
+      "allele_sizes_bp": [150, 178, 202, 228],
+      "allele_definitions": {
+        "178": {
+          "phenotype": "Pl2 resistance-associated allele",
+          "mechanism": "Linked to Pl2 resistance locus on LG11",
+          "desirability": "desirable"
+        },
+        "150": {
+          "phenotype": "Susceptibility-associated allele",
+          "linkage": "Linked to susceptible haplotype",
+          "desirability": "undesirable"
+        },
+        "202": {
+          "phenotype": "Intermediate variant",
+          "linkage": "Requires further characterization",
+          "desirability": "intermediate"
+        },
+        "228": {
+          "phenotype": "Rare allele",
+          "linkage": "Low frequency in tested germplasm",
+          "desirability": "needs_characterization"
+        }
+      },
+      "genotype_interpretation": {
+        "178:178": {"phenotype": "Likely homozygous Pl2", "resistance": "Strong powdery mildew resistance"},
+        "150:178": {"phenotype": "Heterozygous at Pl2 locus", "resistance": "Partial resistance"},
+        "150:150": {"phenotype": "Likely no Pl2 allele", "resistance": "Susceptible to powdery mildew"}
+      },
+      "notes": "SSR marker linked to the Pl2 locus on chromosome 11, conferring resistance to powdery mildew (Podosphaera leucotricha). Pl2 was identified from the crabapple species Malus zumi. Marker-assisted selection accelerates introgression of Pl2 into commercial backgrounds.",
+      "references": [
+        "James et al., 1997, Plant Breeding",
+        "Calenge et al., 2005, Theor Appl Genet",
+        "Gardiner et al., 2012, Theor Appl Genet",
+        "Wu et al., 2022, BMC Genomics"
+      ],
+      "breeding_notes": "Pl2 provides moderate to high resistance to powdery mildew under field conditions. Combine with Pl5 (LG12) for enhanced resistance. Pyramiding Pl loci from different sources is recommended for durable resistance."
+    },
+    "CO_INDEL": {
+      "full_name": "Co Indel (Columnar growth habit)",
+      "trait": "Columnar Growth Habit",
+      "trait_category": "growth_habit",
+      "chromosome": 10,
+      "lg": "LG10",
+      "marker_type": "SCAR",
+      "probe_type": "non-fluorescent",
+      "primer_sequences": {
+        "forward": "GGAAAACGAGGGAAAGTACG",
+        "reverse": "CATCAACCAATGCAAGCAAT"
+      },
+      "allele_sizes_bp": [180, 220],
+      "allele_definitions": {
+        "180": {
+          "phenotype": "Columnar growth (Co allele)",
+          "mechanism": "TILLER ANGLES (TAC1)-like transcription factor variant",
+          "effect": "Reduced lateral branching, compact architecture",
+          "desirability": "desirable_for_high_density"
+        },
+        "220": {
+          "phenotype": "Standard growth (co allele)",
+          "mechanism": "Wild-type growth habit",
+          "effect": "Normal lateral branching",
+          "desirability": "standard"
+        }
+      },
+      "genotype_interpretation": {
+        "180:180": {"phenotype": "Columnar (homozygous)", "habit": "Strongly columnar, minimal lateral branching"},
+        "180:220": {"phenotype": "Semi-columnar (heterozygous)", "habit": "Reduced branching intermediate phenotype"},
+        "220:220": {"phenotype": "Standard growth habit", "habit": "Normal branching and spread"}
+      },
+      "notes": "The Co locus on chromosome 10 controls columnar growth habit in apple, derived from the 'Wijcik McIntosh' mutation. The columnar phenotype is characterized by reduced internode length, absence of lateral branching near the apex, and compact tree architecture suitable for high-density planting systems.",
+      "references": [
+        "Brown et al., 1998, J Am Soc Hortic Sci",
+        "Watson & Wirkin, 2007, J Hortic Sci Biotechnol",
+        "Velasco et al., 2010, Nat Genet",
+        "Kanehi et al., 2014, BMC Genomics"
+      ],
+      "breeding_notes": "Columnar growth is a semi-dominant trait. Heterozygous (Co/co) trees show a semi-columnar phenotype. Homozygous (Co/Co) trees are strongly columnar but may exhibit reduced fruit size. Columnar rootstocks and cultivars are ideal for high-density orchard systems (1500-2500 trees/ha). Verify phenotype with field observation, as environmental factors can modify expression."
+    },
+    "CRISP_SSR": {
+      "full_name": "Crispness-associated SSR (Fruit Crispness)",
+      "trait": "Fruit Crispness",
+      "trait_category": "texture",
+      "chromosome": 5,
+      "lg": "LG05",
+      "marker_type": "SSR",
+      "probe_type": "fluorescent",
+      "dye": "HEX",
+      "primer_sequences": {
+        "forward": "/5HEX/TGGTTTGGATTGATTTGGTG",
+        "reverse": "GCCAAGAAACCACAAATCAG"
+      },
+      "allele_sizes_bp": [168, 196, 210],
+      "allele_definitions": {
+        "196": {
+          "phenotype": "Crisp texture",
+          "mechanism": "Associated with higher turgor pressure and cell wall integrity",
+          "frequency_in_elite": 0.35,
+          "desirability": "desirable"
+        },
+        "168": {
+          "phenotype": "Mealy/soft texture",
+          "mechanism": "Associated with cell wall degradation during storage",
+          "frequency_in_elite": 0.25,
+          "desirability": "undesirable"
+        },
+        "210": {
+          "phenotype": "Intermediate crispness",
+          "mechanism": "Moderate turgor and cell wall properties",
+          "frequency_in_elite": 0.15,
+          "desirability": "intermediate"
+        }
+      },
+      "genotype_interpretation": {
+        "196:196": {"phenotype": "Crisp fruit", "texture": "High crispness retention during storage"},
+        "196:168": {"phenotype": "Moderately crisp", "texture": "Intermediate crispness, storage-dependent"},
+        "168:168": {"phenotype": "Mealy/soft fruit", "texture": "Low crispness, prone to mealiness"},
+        "196:210": {"phenotype": "Good crispness", "texture": "Moderate-high crispness retention"}
+      },
+      "notes": "Crispness is a complex quantitative trait influenced by turgor pressure, cell wall composition, and intercellular adhesion. This SSR marker on chromosome 5 is associated with crispness retention during cold storage. Use in conjunction with ACS, ACO, and MD_PG1 markers for comprehensive texture evaluation.",
+      "references": [
+        "Longhi et al., 2013, BMC Plant Biology",
+        "Daccord et al., 2014, Nature Genetics",
+        "Ru et al., 2021, Plant Biotechnol J"
+      ],
+      "breeding_notes": "Crispness is a key quality attribute for premium table apples. The 196 bp allele is associated with delayed mealiness onset during storage. Combine with ACS/ACO markers targeting ethylene biosynthesis for synergistic selection of firm, crisp fruit."
     }
   },
   "trait_groups": {
@@ -327,22 +557,33 @@
       "description": "Skin and flesh color traits controlled by anthocyanin biosynthesis pathways"
     },
     "texture": {
-      "markers": ["ACS", "ACO", "MD_PG1"],
-      "description": "Fruit texture traits controlled by ethylene production and cell wall degradation"
+      "markers": ["ACS", "ACO", "MD_PG1", "CRISP_SSR"],
+      "description": "Fruit texture traits including firmness, crispness, ethylene production, and cell wall degradation"
     },
     "acidity": {
       "markers": ["MA_INDEL"],
-      "description": "Fruit acidity controlled by malate transporter genes"
+      "description": "Fruit acidity controlled by malate transporter genes (Ma locus)"
     },
     "disease_resistance": {
-      "markers": ["BP16", "BP13"],
-      "description": "Bitter pit susceptibility markers related to calcium metabolism"
+      "markers": ["BP16", "BP13", "Vf_SCAR", "AL07", "PL2_SSR"],
+      "description": "Disease resistance markers for apple scab (Vf/Rvi6), powdery mildew (Pl2), and bitter pit susceptibility"
+    },
+    "growth_habit": {
+      "markers": ["CO_INDEL"],
+      "description": "Vegetative growth architecture traits including columnar habit for high-density planting"
+    },
+    "fruit_quality": {
+      "markers": ["MA_INDEL", "ACS", "ACO", "MD_PG1", "CRISP_SSR"],
+      "description": "Composite fruit quality traits encompassing acidity, firmness, and crispness"
     }
   },
   "chromosomal_locations": {
+    "1": ["Vf_SCAR", "AL07"],
+    "5": ["CRISP_SSR"],
     "8": ["BP16", "BP13"],
     "9": ["MYB10", "RED_TE"],
-    "10": ["ACS", "ACO", "MD_PG1"],
+    "10": ["ACS", "ACO", "MD_PG1", "CO_INDEL"],
+    "11": ["PL2_SSR"],
     "16": ["MA_INDEL"]
   },
   "methodology": {
