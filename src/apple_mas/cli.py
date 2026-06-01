@@ -8,7 +8,6 @@ generating reports, and visualizing results.
 import argparse
 import os
 import sys
-from pathlib import Path
 
 
 def main():

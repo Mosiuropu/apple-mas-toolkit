@@ -5,7 +5,7 @@ Provides methods to score accessions based on desired allele combinations,
 rank parents by trait suitability, and generate crossing recommendations.
 """
 
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 import numpy as np
 import pandas as pd

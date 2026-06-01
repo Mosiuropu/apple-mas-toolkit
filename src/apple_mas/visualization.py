@@ -6,8 +6,7 @@ correlation heatmaps, dendrograms, and multi-marker comparison figures.
 All plots use a consistent color scheme suitable for publication.
 """
 
-import os
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import List, Optional, Tuple
 
 import matplotlib
 matplotlib.use("Agg")
